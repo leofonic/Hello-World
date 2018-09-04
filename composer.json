@@ -1,5 +1,5 @@
 {
-  "require": {,
+  "require": {
     "linslin/oxid6-example-module": "^0.0.4"
   }
 }
