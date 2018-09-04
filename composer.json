@@ -12,13 +12,25 @@
     "linslin/oxid6-example-module": "^0.0.4"
   },
   "require-dev": {
+    "oxid-esales/testing-library": "^v5.0.0",
+    "oxid-esales/coding-standards": "^v3.0.2",
+    "incenteev/composer-parameter-handler": "~v2.0",
+    "oxid-esales/oxideshop-ide-helper": "^v3.0.0",
+    "oxid-esales/azure-theme": "^v1.4.1"
   },
   "autoload-dev": {
+    "psr-4": {
+      "OxidEsales\\EshopCommunity\\Tests\\": "./vendor/oxid-esales/oxideshop-ce/tests"
+    }
   },
   "scripts": {
     "post-install-cmd": [
+      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+      "@oe:ide-helper:generate"
     ],
     "post-update-cmd": [
+      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+      "@oe:ide-helper:generate"
     ],
     "oe:ide-helper:generate": [
       "if [ -f ./vendor/bin/oe-eshop-ide_helper ]; then oe-eshop-ide_helper; fi"
