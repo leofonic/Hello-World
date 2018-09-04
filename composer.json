@@ -1,4 +1,5 @@
 {
     "require": {
+        "laracasts/testdummy": "^2.3"
     }
 }
